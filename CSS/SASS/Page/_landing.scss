@@ -1,0 +1,65 @@
+@use '../Helpers/variables' as *;
+@use '../Helpers/mixins' as *;
+.landing{
+    background-color: #7791FB;
+    height: calc(100vh - 95px);
+    overflow: hidden;
+    @media ($maxMeduim) {
+        background-color: $secColor;
+        height: calc(100vh - 95px);
+    }
+    @media (max-width:320px) {
+        background-color: $secColor;
+        height: calc(130vh - 95px);
+    }
+    .left-side{
+        .text{
+            margin-bottom: 22px;
+            h1{
+                max-width: 536px;
+                font-size: 56px;
+                margin-bottom:22px;
+                color: #ffffff;
+            }
+            p{
+                max-width: 525px;
+                color: #ffffff
+            }
+        }
+        > a{
+                
+        }
+    }
+    .bov{
+        .square{
+            right:10%;
+            bottom: -60px;
+         }
+         .circle-1{
+            bottom: -50px;
+            left: 100px;
+         }
+         .circle-2{
+            bottom: 0px;
+            left: 200px;
+         }
+         .circle-3{
+            bottom: -20px;
+            left: 280px;
+         }
+    }
+
+}
+
+
+.curve{
+ position: absolute;
+ width: 100%;
+ bottom: -100px;
+ @media ($maxMeduim) {
+     bottom: 0;
+ }
+ @media (max-width:332px) {
+    display: none;
+ }
+}

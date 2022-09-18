@@ -1,0 +1,185 @@
+@use '../Helpers/variables' as *;
+@use '../Helpers/mixins' as *;
+
+.control{
+    .container{
+        .control-sec{
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            .upper{
+                flex-basis: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                box-shadow: 0px 0px 6px 0px #0000002f inset;
+                padding: 7px;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+                div{
+                    margin: 0 10px 0 20px;
+                }
+                svg{
+                    color: $mainColor;
+                }
+            }
+            .body{
+                display: flex;
+                .chozen-side{
+                    padding: 10px 0;
+                    text-align: center;
+                    box-shadow: 0px 0px 5px 0px #0000002f inset;
+                    > div{
+                        text-transform: capitalize;
+                        padding: 10px;
+                        cursor: pointer;
+                        svg{
+                            font-size: 1.5rem;
+                            color: $mainColor;
+                            transition: .2s;
+                        }
+                        @media ($maxSmall) {
+                            padding: 5px;
+                           
+                          }
+                    }
+                }
+                .content{
+                    background-color: #eee;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 37px;
+                    box-shadow: 0px 0px 15px 0px #0000002f ;
+                    @media ($maxSmall) {
+                        padding: 10px;
+                       
+                      }
+                    .box-us{
+                        flex-basis: 49%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        background-color: #ffffff;
+                        border-radius: 7px;
+                        padding-top: 10px;
+                        margin-bottom: 3%;
+                        position: relative;
+                        cursor: pointer;
+                        &::before{
+                          content: '';
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          background-color: rgba(204, 204, 204, 0.151);
+                          width: 0;
+                          height: 100%;
+                          transition: .2s;
+                        }
+                        &:hover::before{
+                            width: 100%;
+                        }
+                        @media ($maxLarge) {
+                            flex-basis: 100%;
+                            justify-content: flex-start;
+                            margin-bottom: 6%;
+                            
+                           }
+                        .caption{
+                            flex-basis: 100%;
+                            margin-left: 40px;
+                            margin-bottom: 20px;
+                        }
+                        .left{
+                             span{
+                               display: inline-block;
+                               margin-bottom: 10px;
+                                @media ($maxLarge) {
+                                    margin-bottom: 20px;
+                                    padding-left: 20px ;
+                                    padding-right: 5px;
+                                }
+                                &:not(.ms-lg-3){
+                                  color: #777;
+                                }
+                             } 
+
+                        }
+                        .right{
+                            span{
+                                display: inline-block;
+                                margin-bottom: 10px; 
+                                @media ($maxLarge) {
+                                    margin-bottom: 20px;
+                                    padding-left: 20px ;
+                                }
+                                &:not(.ms-lg-3){
+                                    color: #777;
+                                  }
+                            }
+                        }
+                        .down{
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: #ddd;
+                            align-items: center;
+                            flex-basis: 100%;
+                            padding: 7px;
+                            text-align: center;
+                            @media ($maxSmall) {
+                              flex-direction: column;
+                              > div{
+                                margin-bottom: 10px;
+                              }
+                            }
+                        }
+                        
+
+                    }
+                    .box{
+                        flex-basis: 30.3%;
+                        background-color: #ffffff;
+                        border-radius: 7px;
+                        margin-bottom: 3%;
+                        padding: 20px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        cursor: pointer;
+                        position: relative;
+                        &::before{
+                          content: '';
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          background-color: rgba(204, 204, 204, 0.151);
+                          width: 0;
+                          height: 100%;
+                          transition: .2s;
+                        }
+                        &:hover::before{
+                            width: 100%;
+                        }
+                        @media ($maxMeduim) {
+                        flex-basis: 47.3%;
+                       }
+                        @media ($maxSmall) {
+                            flex-basis: 100%;
+                        } 
+                        p:nth-child(2){
+                        color: #777;
+                        }
+                        svg{
+                            font-size: 2rem;
+                            color: $mainColor;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@use '../Helpers/variables' as *;
+@use '../Helpers/mixins' as *;
+.navbar{
+    background-color: #7791FB;
+    position: relative;
+    @media ($maxMeduim) {
+        background-color: $secColor;
+    }
+    .container{
+        .logo{
+            font-size: 46px;
+            color: #ffffff
+        }
+        .collapse{
+            @media ($maxMeduim) {
+                background-color: $mainColor;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 100%;
+                height: calc(100vh - 95px);
+                padding: 0 10px;
+            }
+            @media (max-width:320px) {
+                background-color: $mainColor;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 100%;
+                height: calc(120vh - 95px);
+                padding: 0 10px;
+            }
+            a{
+                font-size: 20px;
+                color: #ffffff;
+                &:hover{
+                   text-decoration: underline;
+                  }
+                
+            }
+            .main-btn{
+                @include btn($ftColor);
+                &:hover{
+                    text-decoration: none;
+                    background-color: $mainColor;
+                 }
+            }
+        }
+        .navbar-toggler{
+            box-shadow:none;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+}

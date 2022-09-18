@@ -1,0 +1,30 @@
+@use '../Helpers/variables' as *;
+@use '../Helpers/mixins' as *;
+
+.system{
+    background-color: $secColor;
+    overflow: hidden;
+    img{
+        @media ($maxSmall) {
+            top: 60% !important;
+            transform: translateY(-50%) !important;
+        }
+    }
+    .container{
+        .sys-sec{
+          .box{
+             position: relative;
+             margin-bottom: 80px;
+             &::before{
+                content: '';
+                position: absolute;
+                left: -20px;
+                top: 0;
+                width: 1px;
+                height: 121px;
+                background-color: #ffffff;
+             }
+          }
+        }
+    }
+}

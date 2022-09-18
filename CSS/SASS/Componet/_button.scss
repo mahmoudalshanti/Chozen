@@ -1,0 +1,15 @@
+@use '../Helpers/variables' as *;
+@use '../Helpers/mixins' as *;
+
+ .main-btn{
+    @include btn($thColor);
+    transition: .2s;
+    z-index: 5;
+    &:hover{
+        text-decoration: none;
+        background-color: $secColor;
+        color: #ffffff;
+      
+     }
+ }
+ 

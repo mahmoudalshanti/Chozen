@@ -1,0 +1,22 @@
+@use '../Helpers/variables' as *;
+@use '../Helpers/mixins' as *;
+
+.user{
+  .container{
+    .user-sec{
+        margin-top: 200px;
+     .row {
+        .card{
+            position: relative;
+            margin-bottom: 150px;
+            img{
+               top: -55px;
+               &:nth-child(2){
+                top: -78px;
+               }
+            }
+        }
+    }
+  }
+ }
+}

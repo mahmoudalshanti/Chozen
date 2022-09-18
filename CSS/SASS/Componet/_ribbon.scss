@@ -1,0 +1,74 @@
+@use '../Helpers/variables' as *;
+@use '../Helpers/mixins' as *;
+
+.ribbon{
+    position: relative;
+    background-color: $secColor;
+    .container{
+        .row{
+            .prag{
+                p{
+                    font-size: 36px;
+                }
+            }
+            .zr{
+                a{
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    font-size: 20px;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}
+
+div.circle-1-down{
+width: 37px;
+height: 37px;
+border-radius: 50%;
+background-color: $secColor;
+box-shadow: 0px 33px 36px 0px #0000002f;
+bottom: -70px;
+left: 15%;
+}
+div.circle-2-down{
+width: 77px;
+height: 77px;
+border-radius: 50%;
+background-color: $secColor;
+box-shadow: 0px 33px 36px 0px #0000002f;
+bottom: -80px;
+left: 30%;
+z-index: 3;
+}
+div.circle-3-down{
+width: 117px;
+height: 117px;
+border-radius: 50%;
+background-color: $secColor;
+box-shadow: 0px 33px 36px 0px #0000002f;
+bottom: -60px;
+left: 25%;
+z-index: 2;
+}
+div.circle-2-up{
+width: 77px;
+height: 77px;
+border-radius: 50%;
+background-color: $secColor;
+box-shadow: 0px 33px 36px 0px #0000002f;
+top:-10px;
+right:0px;
+z-index: 3;
+}
+div.circle-3-up{
+width: 117px;
+height: 117px;
+border-radius: 50%;
+background-color: $secColor;
+box-shadow: 0px 33px 36px 0px #0000002f;
+top: -70px;
+right: 0;
+z-index: 2;
+}

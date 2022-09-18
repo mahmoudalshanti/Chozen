@@ -1,0 +1,17 @@
+@use '../Helpers/variables' as *;
+@use '../Helpers/mixins' as *;
+
+.main-heading{
+    margin-bottom: 57px;
+    @media ($maxSmall) {
+       text-align: center;
+    }
+    h1{
+       color: $mainColor;
+    }
+    p{
+       max-width: 771px; 
+       color: #777;
+       margin: 19px auto 0;
+    }
+ }

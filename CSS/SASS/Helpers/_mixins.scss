@@ -1,0 +1,8 @@
+@use '../Helpers/variables' as *;
+
+@mixin btn($color) {         
+    background-color: $color;  // button colors
+    color: white; 
+}
+
+ 
